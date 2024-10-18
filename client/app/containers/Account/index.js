@@ -6,7 +6,6 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-
 import actions from '../../actions';
 
 import AccountDetails from '../../components/Manager/AccountDetails';
@@ -14,6 +13,7 @@ import SubPage from '../../components/Manager/SubPage';
 
 class Account extends React.PureComponent {
   componentDidMount() {
+    // Uncomment this if fetchProfile is a needed action
     // this.props.fetchProfile();
   }
 
@@ -42,4 +42,5 @@ const mapStateToProps = state => {
   };
 };
 
+// Make sure actions include the needed functions
 export default connect(mapStateToProps, actions)(Account);
